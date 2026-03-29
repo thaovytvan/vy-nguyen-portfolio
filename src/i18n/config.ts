@@ -90,7 +90,16 @@ const resources = {
       "contact_message_placeholder": "YOUR MESSAGE*",
       "contact_submit": "SUBMIT",
       "footer_top": "BACK TO TOP",
-      "footer_rights": "@2020 Thao Vy All Rights Reserved."
+      "footer_rights": "@2020 Thao Vy All Rights Reserved.",
+      "chat_welcome_morning": "Good morning! I am Vy's assistant. How can I help you today?",
+      "chat_welcome_afternoon": "Good afternoon! I am Vy's assistant. How can I help you today?",
+      "chat_welcome_evening": "Good evening! I am Vy's assistant. How can I help you today?",
+      "chat_welcome": "Hello! I am Vy's assistant. How can I help you today?",
+      "chat_title": "Vy's Assistant",
+      "chat_subtitle": "Typically replies instantly",
+      "chat_placeholder": "Type a message...",
+      "chat_error_network": "Network Error: Failed to connect to AI server.",
+      "chat_error_fallback": "Sorry, I can't reply right now."
     }
   },
   vi: {
@@ -179,7 +188,16 @@ const resources = {
       "contact_message_placeholder": "TIN NHẮN CỦA BẠN*",
       "contact_submit": "GỬI",
       "footer_top": "LÊN ĐẦU TRANG",
-      "footer_rights": "@2020 Thảo Vy. Bảo lưu mọi quyền."
+      "footer_rights": "@2020 Thảo Vy. Bảo lưu mọi quyền.",
+      "chat_welcome_morning": "Chào buổi sáng! Tôi là trợ lý của Vy. Tôi có thể giúp gì cho bạn hôm nay?",
+      "chat_welcome_afternoon": "Chào buổi chiều! Tôi là trợ lý của Vy. Tôi có thể giúp gì cho bạn hôm nay?",
+      "chat_welcome_evening": "Chào buổi tối! Tôi là trợ lý của Vy. Tôi có thể giúp gì cho bạn hôm nay?",
+      "chat_welcome": "Xin chào! Tôi là trợ lý của Vy. Tôi có thể giúp gì cho bạn hôm nay?",
+      "chat_title": "Trợ lý của Vy",
+      "chat_subtitle": "Thường trả lời ngay lập tức",
+      "chat_placeholder": "Nhập tin nhắn...",
+      "chat_error_network": "Lỗi mạng: Không thể kết nối với máy chủ AI.",
+      "chat_error_fallback": "Xin lỗi, hiện tại tôi không thể trả lời."
     }
   }
 };

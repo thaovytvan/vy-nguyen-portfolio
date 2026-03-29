@@ -6,6 +6,7 @@ import ThemeSwitcher from "../components/ui-component/ThemeSwitcher";
 import { useScroll } from "../context/ScrollContext";
 import type { SectionRefs } from "../context/ScrollContext";
 import { FooterLayout } from "./FooterLayout";
+import Chatbot from "../components/ui-component/Chatbot";
 
 const NavItem = ({ 
   section, 
@@ -98,6 +99,7 @@ const MainLayout = () => {
         <Outlet />
         <FooterLayout />
       </main>
+      <Chatbot />
     </div>
   );
 };
