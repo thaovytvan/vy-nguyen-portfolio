@@ -1,10 +1,8 @@
-import { forwardRef, useState } from "react";
-import FilterTab from "./ui-component/FilterTab";
-import SectionTitle from "./ui-component/SectionTitle";
+import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
+import SectionTitle from "./ui-component/SectionTitle";
 
 const PortfolioSection = forwardRef<HTMLDivElement>((_, ref) => {
-  const [filter, setFilter] = useState("ALL");
   const { t } = useTranslation();
 
   const portfolioItems = [
@@ -13,49 +11,51 @@ const PortfolioSection = forwardRef<HTMLDivElement>((_, ref) => {
       type: "CODED",
       title: t("port_project_1_title"),
       desc: t("port_project_1_desc"),
-      img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+      img: "/src/assets/images/my-website.png",
+      link: "https://ru-garden.vercel.app/"
     },
     {
       id: 2,
       type: "DESIGNED",
       title: t("port_project_2_title"),
       desc: t("port_project_2_desc"),
-      img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2670&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2670&auto=format&fit=crop",
+      link: "https://ru-garden.vercel.app/"
     },
     {
       id: 3,
       type: "CODED",
       title: t("port_project_3_title"),
       desc: t("port_project_3_desc"),
-      img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2683&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2683&auto=format&fit=crop",
+      link: "https://ru-garden.vercel.app/"
     },
     {
       id: 4,
       type: "DESIGNED",
       title: t("port_project_4_title"),
       desc: t("port_project_4_desc"),
-      img: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop",
+      link: "https://ru-garden.vercel.app/"
     },
     {
       id: 5,
       type: "CODED",
       title: t("port_project_5_title"),
       desc: t("port_project_5_desc"),
-      img: "https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=2670&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=2670&auto=format&fit=crop",
+      link: "https://ru-garden.vercel.app/"
     },
     {
       id: 6,
       type: "DESIGNED",
       title: t("port_project_6_title"),
       desc: t("port_project_6_desc"),
-      img: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=2070&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=2070&auto=format&fit=crop",
+      link: "https://ru-garden.vercel.app/"
     }
   ];
 
-  const filteredItems =
-    filter === "ALL"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.type === filter);
   return (
     <div ref={ref}>
       <div className="w-full flex justify-center py-40 relative overflow-hidden border-t-8 border-border-base">
@@ -75,7 +75,7 @@ const PortfolioSection = forwardRef<HTMLDivElement>((_, ref) => {
       <div className="bg-bg-base/50">
         {/* Filters */}
         <div className="flex justify-center bg-bg-base border-b border-border-base">
-          <div className="flex pt-4">
+          {/* <div className="flex pt-4">
             <FilterTab
               active={filter === "ALL"}
               onClick={() => setFilter("ALL")}
@@ -94,13 +94,14 @@ const PortfolioSection = forwardRef<HTMLDivElement>((_, ref) => {
             >
               {t("port_filter_designed")}
             </FilterTab>
-          </div>
+          </div> */}
         </div>
+        
 
         {/* Grid Images */}
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-bg-base">
-            {filteredItems.map((item) => (
+            {portfolioItems.map((item) => (
               <div
                 key={item.id}
                 className="relative group overflow-hidden aspect-[4/3] bg-black"
@@ -127,7 +128,9 @@ const PortfolioSection = forwardRef<HTMLDivElement>((_, ref) => {
 
                     <div className="flex items-center justify-center text-[10px] font-bold tracking-widest uppercase">
                       <span className="w-[1px] h-3 bg-white mx-3"></span>
-                      <button className="text-white hover:text-primary transition-colors cursor-pointer">
+                      <button className="text-white hover:text-primary transition-colors cursor-pointer"
+                      onClick={() => window.open(item.link, "_blank")}
+                      >
                         {t("port_demo")}
                       </button>
                       <span className="w-px h-3 bg-white mx-3"></span>
