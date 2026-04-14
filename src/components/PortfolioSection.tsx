@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "./ui-component/SectionTitle";
+import myWebsiteImg from "../assets/images/my-website.png";
 
 const PortfolioSection = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const PortfolioSection = forwardRef<HTMLDivElement>((_, ref) => {
       type: "CODED",
       title: t("port_project_1_title"),
       desc: t("port_project_1_desc"),
-      img: "/src/assets/images/my-website.png",
+      img: myWebsiteImg,
       link: "https://ru-garden.vercel.app/"
     },
     {
